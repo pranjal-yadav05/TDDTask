@@ -3,6 +3,13 @@ package org.StringCalculatorTDD;
 public class StringCalculator {
     public int add(String numbers) {
         if (numbers.isEmpty()) return 0;
-        return Integer.parseInt(numbers);  // handles single number input
+        String[] parts = numbers.split(",");
+
+        if (parts.length == 1) {
+            return Integer.parseInt(parts[0]);
+        }
+
+        // Handles two numbers
+        return Integer.parseInt(parts[0]) + Integer.parseInt(parts[1]);
     }
 }

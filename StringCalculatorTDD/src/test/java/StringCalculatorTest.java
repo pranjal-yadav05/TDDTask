@@ -16,4 +16,10 @@ public class StringCalculatorTest {
         assertEquals(1, calculator.add("1"));
     }
 
+    @Test
+    public void testTwoNumbersReturnsSum() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(3, calculator.add("1,2"));
+    }
+
 }
