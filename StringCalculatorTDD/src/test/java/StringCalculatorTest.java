@@ -22,4 +22,11 @@ public class StringCalculatorTest {
         assertEquals(3, calculator.add("1,2"));
     }
 
+    @Test
+    public void testMultipleNumbersReturnsSum() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(6, calculator.add("1,2,3"));
+        assertEquals(15, calculator.add("4,5,6"));
+    }
+
 }
